@@ -61,11 +61,6 @@
 
 
 footer {
-  background-color: #111;          /* fond sombre pour faire ressortir */
-  padding: 20px 40px;
-  display: flex;
-  align-items: center;
-  height: 60px;
 }
 
 footer h3 {
