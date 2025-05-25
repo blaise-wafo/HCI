@@ -53,4 +53,56 @@
   button:hover {
     background-color: #008fcc;
   }
+
+
+
+
+
+
+
+footer {
+  background-color: #111;          /* fond sombre pour faire ressortir */
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+footer h3 {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;  /* jolie police moderne */
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00ffff;                    /* couleur cyan brillante */
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+/* Effet brillant (shimmer) animé */
+footer h3::before {
+  content: 'BW';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.7) 50%,
+    transparent 70%
+  );
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
   
