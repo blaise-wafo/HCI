@@ -68,7 +68,7 @@ footer {
   height: 60px;
 }
 
-footer h3 {
+footer h3 a {
   margin: 0;
   font-family: 'Poppins', sans-serif;  /* jolie police moderne */
   font-size: 2rem;
@@ -80,7 +80,7 @@ footer h3 {
 }
 
 /* Effet brillant (shimmer) animé */
-footer h3::before {
+footer h3 a::before {
   content: 'BW';
   position: absolute;
   top: 0;
