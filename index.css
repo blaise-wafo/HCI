@@ -28,7 +28,7 @@
 
 .Bash p a:hover {
   color: #cccccc; /* effet au survol */
-  background-color: none;
+  background-color: transparent;
 }
 
 /* Animation d'entrée */
