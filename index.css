@@ -9,24 +9,24 @@
     height: 100%;
   }
 
-.login {
+.Bash {
   position: absolute;
   top: 20px;
   right: 30px;
   animation: slideIn 1s ease-out;
 }
 
-.login p a{
+.Bash p a{
   color: #ffffff;
-  font-weight: 300; /* style clair */
+  font-weight: 200; /* style clair */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
 
-.login p a:hover {
+.Bash p a:hover {
   color: #cccccc; /* effet au survol */
 }
 
