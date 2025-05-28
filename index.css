@@ -75,6 +75,9 @@
 
 .Bash p a:hover {
   color: #cccccc; /* effet au survol */
+}
+
+.Bash p:hover {
   background-color: transparent;
 }
 
