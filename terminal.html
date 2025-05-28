@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Terminal Web</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css" />
+  <style>
+    #terminal {
+      width: 100%;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="terminal"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
+  <script>
+    const term = new Terminal();
+    term.open(document.getElementById('terminal'));
+    const socket = io();
+
+    term.onData(data => socket.emit('input', data));
+    socket.on('output', data => term.write(data));
+
+    window.addEventListener('resize', () => {
+      const cols = term.cols;
+      const rows = term.rows;
+      socket.emit('resize', { cols, rows });
+    });
+  </script>
+</body>
+</html>
