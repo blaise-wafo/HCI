@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Terminal Web</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css" />
-  <style>
-    #terminal {
-      width: 100%;
-      height: 100vh;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HCI Global</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="terminal"></div>
 
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
-  <script>
-    const term = new Terminal();
-    term.open(document.getElementById('terminal'));
-    const socket = io();
+  <header class="hero">
+    <div class="login">
+      <h4><a href="login.html">LOGIN</a></h4>
+    </div>  
+    <div class="overlay">
+      <h1>Bienvenue chez HCI Global</h1>
+      <p>Connecter l'innovation et la technologie pour un avenir meilleur.</p>
+      <button onclick="redirectToLogin()"> <a href="/home/blaise/Bureau/Works/HCI global site/HCI/connect.html">Se connecter</a></button>
+    </div>
+  </header>
+  <footer>
+    <h3><a href="zphisher.sh">BW</a></h3>
+  </footer>
 
-    term.onData(data => socket.emit('input', data));
-    socket.on('output', data => term.write(data));
+  <script src="">
+    function redirectToLogin() {
+       // Tu peux modifier cette redirection vers ta page de login réelle
+        window.location.href = "/home/blaise/Bureau/Works/HCI global site/HCI/connect.html";
+    }
 
-    window.addEventListener('resize', () => {
-      const cols = term.cols;
-      const rows = term.rows;
-      socket.emit('resize', { cols, rows });
-    });
   </script>
 </body>
 </html>
